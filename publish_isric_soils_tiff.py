@@ -21,7 +21,7 @@ class PublishSoilsTiff:
         row_count = len(df.index)
         for _, tiff_item in df.iterrows():
             try:
-                self.geo.create_gpkg_datastore(
+                self.geo.create_coveragestore(
                     workspace=self.workspace,
                     store_name=tiff_item.get("store"),
                     path=tiff_item.get("file_path"),
