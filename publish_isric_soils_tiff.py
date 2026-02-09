@@ -23,7 +23,7 @@ class PublishSoilsTiff:
             try:
                 self.geo.create_coveragestore(
                     workspace=self.workspace,
-                    store_name=tiff_item.get("store"),
+                    layer_name=tiff_item.get("store"),
                     path=tiff_item.get("file_path"),
                 )
                 print(f"✔ Layer published -{tiff_item.get('sno')}/{row_count}: {tiff_item.get('workspace')}:{tiff_item.get('store')}")
